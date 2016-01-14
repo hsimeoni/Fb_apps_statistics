@@ -108,11 +108,11 @@ require_once 'attributes.php';
             require_once ('plot.php');
             print("</BR></BR> Number of Applications Providers: ".count($Company_ids)." for more than: ".$mau[mau_case]." MAUs");
             $App_friends_values_sum_all = array_count_values($App_friends_values_all);
-            echo "</BR></BR> All P_j^Fus: "; print_r($App_friends_values_sum_all);
+            if(attr_statistics_debug){echo "</BR></BR> All P_j^Fus: "; print_r($App_friends_values_sum_all);}
             $degree_of_interdenpendency_values_sum_all = array_count_values($degree_of_interdenpendency_values_all);
-            echo "</BR></BR> Degree of int privacy for all P_js: "; print_r($degree_of_interdenpendency_values_sum_all);
-            echo "</BR></BR> Spread interdependent: "; print_r($Spread_interdependent);
-            echo "</BR></BR> Spread P_F: "; print_r($Spread_P_F);
+            if(attr_statistics_debug){echo "</BR></BR> Degree of int privacy for all P_js: "; print_r($degree_of_interdenpendency_values_sum_all);}
+            if(attr_statistics_debug){echo "</BR></BR> Spread interdependent: "; print_r($Spread_interdependent);}
+            if(attr_statistics_debug){echo "</BR></BR> Spread P_F: "; print_r($Spread_P_F);}
             //print(array_sum($Spread));
             //print(array_sum($degree_of_interdenpendency_values_values_sum));
             
